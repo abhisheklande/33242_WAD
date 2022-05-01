@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="data"></p>
+    <script>
+        const url = "https://622855af9fd6174ca820a2b8.mockapi.io/users"
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true)
+        xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
+        xhr.onload = function(){
+            document.getElementById("data").innerText = this.responseText;
+        }
+        xhr.send();
+    </script>
+</body>
+</html>
